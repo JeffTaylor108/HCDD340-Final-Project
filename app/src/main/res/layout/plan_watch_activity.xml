@@ -1,6 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#B8D4D8">
+
+    <TextView
+        android:id="@+id/planToWatchText"
+        android:layout_width="232dp"
+        android:layout_height="50dp"
+        android:autoText="false"
+        android:text="@string/plan_to_watch"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/theBearImage"
+        app:layout_constraintStart_toStartOf="@+id/theBearImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <ImageView
+        android:id="@+id/theBearImage"
+        android:layout_width="106dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toTopOf="@+id/youImage"
+        app:layout_constraintStart_toStartOf="@+id/youImage"
+        app:layout_constraintTop_toBottomOf="@+id/planToWatchText"
+        app:srcCompat="@drawable/the_bear" />
+
+    <TextView
+        android:id="@+id/theBearTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/the_bear_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/theBearRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/theBearRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/planToWatchText" />
+
+    <TextView
+        android:id="@+id/theBoysTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/the_boys_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/theBoysRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/theBoysRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/youRatingBar" />
+
+    <TextView
+        android:id="@+id/youTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/you_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/youRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/youRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/theBearRatingBar" />
+
+    <ImageView
+        android:id="@+id/sortByIcon"
+        android:layout_width="42dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/theBearTitle"
+        app:layout_constraintEnd_toEndOf="@+id/addPlanningButton"
+        app:layout_constraintStart_toStartOf="@+id/addPlanningButton"
+        app:layout_constraintTop_toBottomOf="@+id/addPlanningButton"
+        app:srcCompat="@drawable/sort_icon" />
+
+    <RatingBar
+        android:id="@+id/theBearRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/youTitle"
+        app:layout_constraintStart_toEndOf="@+id/theBearImage"
+        app:layout_constraintStart_toStartOf="@+id/youTitle"
+        app:layout_constraintTop_toBottomOf="@+id/theBearTitle" />
+
+    <RatingBar
+        android:id="@+id/youRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/theBoysTitle"
+        app:layout_constraintStart_toEndOf="@+id/youImage"
+        app:layout_constraintStart_toStartOf="@+id/theBoysTitle"
+        app:layout_constraintTop_toBottomOf="@+id/youTitle" />
+
+    <RatingBar
+        android:id="@+id/theBoysRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/theBoysImage"
+        app:layout_constraintTop_toBottomOf="@+id/theBoysTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="theBearImage,theBearTitle,theBearRatingBar" />
+
+    <ImageView
+        android:id="@+id/youImage"
+        android:layout_width="108dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/theBoysImage"
+        app:layout_constraintStart_toStartOf="@+id/theBoysImage"
+        app:layout_constraintTop_toBottomOf="@+id/theBearImage"
+        app:srcCompat="@drawable/you" />
+
+    <ImageView
+        android:id="@+id/theBoysImage"
+        android:layout_width="104dp"
+        android:layout_height="142dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/theBoysTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youImage"
+        app:srcCompat="@drawable/the_boys" />
+
+    <ImageView
+        android:id="@+id/addPlanningButton"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/planToWatchText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toEndOf="@+id/planToWatchText"
+        app:layout_constraintTop_toTopOf="@+id/planToWatchText"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

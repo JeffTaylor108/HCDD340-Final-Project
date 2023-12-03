@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Final Project</string>
+    <string name="app_name">WatchWise</string>
+    <string name="watched_shows">Watched</string>
+    <string name="parasite_title">Parasite</string>
+    <string name="plan_to_watch">Plan to Watch</string>
+    <string name="milestones">Milestones</string>
+    <string name="blade_runner_2049_title">Blade Runner 2049</string>
+    <string name="barbie_title">Barbie</string>
+    <string name="the_bear_title">The Bear</string>
+    <string name="you_title">You</string>
+    <string name="the_boys_title">The Boys</string>
 </resources>
