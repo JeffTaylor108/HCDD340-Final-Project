@@ -1,6 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#B8D4D8">
+
+    <TextView
+        android:id="@+id/watchedText"
+        android:layout_width="161dp"
+        android:layout_height="57dp"
+        android:autoText="false"
+        android:text="@string/watched_shows"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/parasiteImage"
+        app:layout_constraintStart_toStartOf="@+id/parasiteImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <ImageView
+        android:id="@+id/parasiteImage"
+        android:layout_width="106dp"
+        android:layout_height="141dp"
+        app:layout_constraintBottom_toTopOf="@+id/bladeRunnerImage"
+        app:layout_constraintStart_toStartOf="@+id/bladeRunnerImage"
+        app:layout_constraintTop_toBottomOf="@+id/watchedText"
+        app:srcCompat="@drawable/parasite" />
+
+    <TextView
+        android:id="@+id/parasiteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parasite_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/parasiteRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/parasiteRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/watchedText" />
+
+    <TextView
+        android:id="@+id/barbieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/barbie_title"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/barbieRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/barbieRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/bladeRunnerRatingBar" />
+
+    <TextView
+        android:id="@+id/bladeRunner2049Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blade_runner_2049_title"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/bladeRunnerRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/bladeRunnerRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/parasiteRatingBar" />
+
+    <ImageView
+        android:id="@+id/sortByIcon"
+        android:layout_width="42dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/parasiteTitle"
+        app:layout_constraintEnd_toEndOf="@+id/addWatchedButton"
+        app:layout_constraintStart_toStartOf="@+id/addWatchedButton"
+        app:layout_constraintTop_toBottomOf="@+id/addWatchedButton"
+        app:srcCompat="@drawable/sort_icon" />
+
+    <RatingBar
+        android:id="@+id/parasiteRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bladeRunner2049Title"
+        app:layout_constraintStart_toEndOf="@+id/parasiteImage"
+        app:layout_constraintStart_toStartOf="@+id/bladeRunner2049Title"
+        app:layout_constraintTop_toBottomOf="@+id/parasiteTitle" />
+
+    <RatingBar
+        android:id="@+id/bladeRunnerRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/barbieTitle"
+        app:layout_constraintStart_toEndOf="@+id/bladeRunnerImage"
+        app:layout_constraintStart_toStartOf="@+id/barbieTitle"
+        app:layout_constraintTop_toBottomOf="@+id/bladeRunner2049Title" />
+
+    <RatingBar
+        android:id="@+id/barbieRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/barbieImage"
+        app:layout_constraintTop_toBottomOf="@+id/barbieTitle" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="parasiteImage,parasiteTitle,parasiteRatingBar" />
+
+    <ImageView
+        android:id="@+id/bladeRunnerImage"
+        android:layout_width="108dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/barbieImage"
+        app:layout_constraintStart_toStartOf="@+id/barbieImage"
+        app:layout_constraintTop_toBottomOf="@+id/parasiteImage"
+        app:srcCompat="@drawable/blade_runner_2049" />
+
+    <ImageView
+        android:id="@+id/barbieImage"
+        android:layout_width="104dp"
+        android:layout_height="142dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/barbieTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bladeRunnerImage"
+        app:srcCompat="@drawable/barbie" />
+
+    <ImageView
+        android:id="@+id/addWatchedButton"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        app:layout_constraintBottom_toBottomOf="@+id/watchedText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toEndOf="@+id/watchedText"
+        app:layout_constraintTop_toTopOf="@+id/watchedText"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
