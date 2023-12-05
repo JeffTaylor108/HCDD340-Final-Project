@@ -133,4 +133,34 @@
         app:layout_constraintVertical_bias="0.4"
         app:srcCompat="@android:drawable/ic_input_add" />
 
+    <TextView
+        android:id="@+id/avgRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/average_rating"
+        app:layout_constraintBottom_toTopOf="@+id/theBearRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/theBearRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/theBearTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/avgRating2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/average_rating"
+        app:layout_constraintBottom_toTopOf="@+id/youRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/youRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/youTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/avgRating3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/average_rating"
+        app:layout_constraintBottom_toTopOf="@+id/theBoysRatingBar"
+        app:layout_constraintStart_toStartOf="@+id/theBoysRatingBar"
+        app:layout_constraintTop_toBottomOf="@+id/theBoysTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
