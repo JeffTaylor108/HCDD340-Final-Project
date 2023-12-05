@@ -10,4 +10,11 @@
     <string name="you_title">You</string>
     <string name="the_boys_title">The Boys</string>
     <string name="average_rating">Avg Rating</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="watch_wise">WatchWise</string>
+
 </resources>
