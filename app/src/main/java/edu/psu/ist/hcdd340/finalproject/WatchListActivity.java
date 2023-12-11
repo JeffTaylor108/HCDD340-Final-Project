@@ -84,6 +84,11 @@ public class WatchListActivity extends AppCompatActivity {
             startActivity(planningListIntent);
             return true;
         }
+        else if(menuId == R.id.menu_profile){
+            Intent profileIntent = new Intent(this, ProfileActivity.class);
+            startActivity(profileIntent);
+            return true;
+        }
         return false;
     }
 }

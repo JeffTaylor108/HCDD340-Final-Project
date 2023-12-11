@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -35,8 +38,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         EditText passwordEditText = findViewById(R.id.editTextPassword);
         String password = passwordEditText.getText().toString();
+        Button button = findViewById(R.id.loginButton);
+
+        if (email.equals("")){
+            Snackbar.make(button, R.string.no_email, Snackbar.LENGTH_LONG).show();
+        }
+        else if (password.equals("")) {
+            Snackbar.make(button, R.string.no_password, Snackbar.LENGTH_LONG).show();
+        }
+        else{
+
+        Intent intent = new Intent(MainActivity.this, WatchListActivity.class);
+        startActivity(intent);
 
         Log.d(TAG, "Email entered: " + email + " and Password: " + password);
+        }
     }
     // Menu Handling
     @Override
@@ -55,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if (menuId == R.id.menu_planning) {
             Intent planningListIntent = new Intent(this, PlanningListActivity.class);
             startActivity(planningListIntent);
+            return true;
+        }
+        else if(menuId == R.id.menu_profile){
+            Intent profileIntent = new Intent(this, ProfileActivity.class);
+            startActivity(profileIntent);
             return true;
         }
         return false;

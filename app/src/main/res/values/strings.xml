@@ -16,4 +16,6 @@
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
     <string name="watch_wise">WatchWise</string>
+    <string name="no_password">You must enter a password to login.</string>
+    <string name="no_email">You must enter an email to login.</string>
 </resources>
