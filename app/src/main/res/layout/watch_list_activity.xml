@@ -75,7 +75,10 @@
         app:layout_constraintBottom_toTopOf="@+id/bladeRunner2049Title"
         app:layout_constraintStart_toEndOf="@+id/parasiteImage"
         app:layout_constraintStart_toStartOf="@+id/bladeRunner2049Title"
-        app:layout_constraintTop_toBottomOf="@+id/parasiteTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/parasiteTitle"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5"/>
 
     <RatingBar
         android:id="@+id/bladeRunnerRatingBar"
@@ -84,7 +87,10 @@
         app:layout_constraintBottom_toTopOf="@+id/barbieTitle"
         app:layout_constraintStart_toEndOf="@+id/bladeRunnerImage"
         app:layout_constraintStart_toStartOf="@+id/barbieTitle"
-        app:layout_constraintTop_toBottomOf="@+id/bladeRunner2049Title" />
+        app:layout_constraintTop_toBottomOf="@+id/bladeRunner2049Title"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5"/>
 
     <RatingBar
         android:id="@+id/barbieRatingBar"
@@ -94,7 +100,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/barbieImage"
-        app:layout_constraintTop_toBottomOf="@+id/barbieTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/barbieTitle"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="0.5"/>
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"

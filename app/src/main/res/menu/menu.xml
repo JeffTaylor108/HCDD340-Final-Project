@@ -4,12 +4,14 @@
 
     <item
         android:id="@+id/menu_watched"
+        android:icon="@drawable/watch_icon"
         android:title="@string/watched_shows"
         app:showAsAction="always" />
     <item
         android:id="@+id/menu_planning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:icon="@drawable/plan_to_watch_icon"
         android:title="@string/plan_to_watch"
         app:showAsAction="always" />
     <item
