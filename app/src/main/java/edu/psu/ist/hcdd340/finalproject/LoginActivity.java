@@ -17,6 +17,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Button button = findViewById(R.id.loginButton);
         button.setOnClickListener(this);
+
     }
 
     private final static String TAG = "LOG_IN";
@@ -30,6 +31,5 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = passwordEditText.getText().toString();
 
         Log.d(TAG, "Email entered: " + email + " and Password: " + password);
-
     }
 }

@@ -6,18 +6,37 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RatingBar;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
+        Button button = findViewById(R.id.loginButton);
+        button.setOnClickListener(this);
 
+    }
+
+    private final static String TAG = "LOG_IN";
+
+    @Override
+    public void onClick(View view) {
+        EditText emailEditText = findViewById(R.id.editTextEmail);
+        String email = emailEditText.getText().toString();;
+
+        EditText passwordEditText = findViewById(R.id.editTextPassword);
+        String password = passwordEditText.getText().toString();
+
+        Log.d(TAG, "Email entered: " + email + " and Password: " + password);
     }
     // Menu Handling
     @Override
