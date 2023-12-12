@@ -26,17 +26,20 @@ public class ProfileActivity extends AppCompatActivity {
             Intent watchListIntent = new Intent(this, WatchListActivity.class);
             startActivity(watchListIntent);
             return true;
-        }
-        if (menuId == R.id.menu_planning) {
+        } else if (menuId == R.id.menu_planning) {
             Intent planningListIntent = new Intent(this, PlanningListActivity.class);
             startActivity(planningListIntent);
             return true;
-        }
-        else if(menuId == R.id.menu_profile){
+        } else if (menuId == R.id.menu_profile){
             Intent profileIntent = new Intent(this, ProfileActivity.class);
             startActivity(profileIntent);
             return true;
+        } else if (menuId == R.id.menu_milestones) {
+            Intent milestonesIntent = new Intent(this, MilestonesActivity.class);
+            startActivity(milestonesIntent);
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }
